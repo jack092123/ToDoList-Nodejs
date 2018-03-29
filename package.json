@@ -1,0 +1,15 @@
+{
+  "name": "todolist-nodejs",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jack092123/ToDoList-Nodejs.git"
+  },
+  "author": "jack092123",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.16.3",
+    "mongoose": "~4.13.12"
+  }
+}
