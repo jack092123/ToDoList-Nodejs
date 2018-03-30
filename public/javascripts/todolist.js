@@ -37,14 +37,23 @@ $(document).ready(function() {
     });
 
     $("#btn_add").click(function(){
-        $.ajax({
-            type: 'POST',
-            url: api_url,
-            data: $("#form_add").serialize(),
-            success: function(result){
-                alert("Add success");
-                location.reload();
-            }
-        });
+        if ($("#task").val() == "" || $("#due_date").val() == ""){
+            alert("Task and Due Date can't be blank");
+        } else {
+            var patt = /([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])/;
+            if (!patt.test($("#due_date").val())) {
+                alert("Due_date isn't correct");
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: api_url,
+                    data: $("#form_add").serialize(),
+                    success: function(result){
+                        alert("Add success");
+                        location.reload();
+                    }
+                });
+            };
+        };
     });
 });

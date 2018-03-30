@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 var api = require('./routes/api');
+var db = require('./configs/database');
 
 var port = process.env.PORT || 8888;
 
