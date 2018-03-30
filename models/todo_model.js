@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+//Define the todo schema of MongoDB
 var todoSchema = new Schema({
     task: String,
     status: String,
