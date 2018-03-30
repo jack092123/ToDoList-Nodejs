@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 
 //Connext to MongoDB
 const MONGO_URL = 'mongodb://127.0.0.1:27017/Todo';
@@ -11,7 +12,7 @@ try {
 //Listen on open and error
 mongoose.connection.once(
     'open', function(){
-        console.log("MongoDB Running");
+        console.log("MongoDB Connecting");
     }
 ).on(
     'error', function(e) {

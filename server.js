@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser')
 var app = express();
 
 var api = require('./routes/api');
@@ -6,12 +7,15 @@ var db = require('./configs/database');
 
 var port = process.env.PORT || 8888;
 
+//parse json
+app.use(bodyParser.urlencoded());
+
 //set public virtual route and the folder path
 app.use('/public', express.static(__dirname + '/public'));
 
-
-app.all('/$', function(req, res, next){
-    console.log(req);
+//Log all request to the console
+app.all('*', function(req, res, next){
+    console.log("Method: " + req.method + "; IP: " + req.ip);
     next();
 });
 

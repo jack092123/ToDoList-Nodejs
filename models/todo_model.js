@@ -7,6 +7,7 @@ var todoSchema = new Schema({
     status: String,
     priority: String,
     due_date: Date,
+    note:String,
     last_modify: Date,
     create_time: Date
 });
