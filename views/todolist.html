@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+    <script type"text/javascript", src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../../public/javascripts/todolist.js"></script>
+    <meta charset="UTF-8">
+    <title>NodeJS To Do List</title>
+</head>
+<body>
+    <h2>NodeJS To Do List</h2>
+    <p>Todo List</p>
+    <table id="table" style="width:100%">
+        <tr>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+            <th>Note</th>
+            <th>Last Modify Time</th>
+            <th>Create Time</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+    <br><br>
+
+    <h2>Add ToDo</h2>
+    <p>Adding Todo by api server</p>
+    <form id="form_add">
+    Task: <input type="text" name="task" id="task"><br>
+    Status: <input type="text" name="status" id="status"><br>
+    Priority: <input type="text" name="priority" id="priority"><br>
+    Due Date: <input type="text" name="due_date", placeholder="yyyy-mm-dd" id="due_date"><br>
+    Note: <input type="text" name="note" id="note"><br>
+    <input type="button" id="btn_add" value="ADD">
+    </form>
+</body>
+</html>
