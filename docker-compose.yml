@@ -1,0 +1,21 @@
+
+version: "3"
+
+services:
+  db:
+    image: mongo:3.6
+    ports:
+      - "27017:27017"
+
+  nodejs:
+    depends_on:
+      - db
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      MONGODB_URL: mongodb://db:27017/Todo
+    links:
+      - db
