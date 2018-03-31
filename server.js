@@ -15,7 +15,7 @@ app.use('/public', express.static(__dirname + '/public'));
 
 //Log all request to the console
 app.all('*', function(req, res, next){
-    console.log("Method: " + req.method + "; IP: " + req.ip);
+    console.log("Method: " + req.method + "; IP: " + req.connection.remoteAddress);
     next();
 });
 
