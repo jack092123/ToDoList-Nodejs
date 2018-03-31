@@ -15,7 +15,7 @@ app.use('/public', express.static(__dirname + '/public'));
 
 //Log all request to the console
 app.all('*', function(req, res, next){
-    console.log(req.method + req.originalUrl);
+    console.log(req.method + " " + req.hostname + req.originalUrl);
     next();
 });
 
