@@ -1,4 +1,4 @@
-FROM node:8.11.0-slim
+FROM node:8.11.2-slim
 LABEL maintainer "jack092123@gmail.com"
 
 EXPOSE 3000
